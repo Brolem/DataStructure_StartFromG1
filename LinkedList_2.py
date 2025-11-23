@@ -1,4 +1,4 @@
-#链表：尾部插入节点
+#链表：头部插入节点
 class Node:
     def __init__(self, data=None):
         self.data = data
@@ -13,8 +13,8 @@ class LinkedList:
     def __init__(self):
         self.head = None
     
-    # 尾部插入函数
-    def append(self, data):
+    # 头部插入函数
+    def insert(self, data):
         """在链表末尾添加新节点"""
         new_node = Node(data)
         
@@ -22,12 +22,9 @@ class LinkedList:
             self.head = new_node
             return
         
-        current = self.head
-        while current.next is not None:
-            current = current.next
+        new_node.next = self.head
+        self.head = new_node
         
-        current.next = new_node
-    
     #显示函数
     def display(self):
         """显示链表内容"""
@@ -42,11 +39,10 @@ class LinkedList:
     def __repr__(self):
         return self.display()
 
-# 被导入时只提供功能，不执行测试；分离接口和实现
 if __name__ == "__main__":
     linked_list = LinkedList()
-    linked_list.append(2)
-    linked_list.append(4)
-    linked_list.append(6)
+    n = int(input('How many numbers?\n'))
+    for _ in range(n):
+        x = int(input('Enter the number \n'))
+        linked_list.insert(x)
     print(linked_list)
-    print(linked_list.display())
