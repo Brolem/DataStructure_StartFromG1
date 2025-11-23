@@ -1,0 +1,37 @@
+#include<stdlib.h>
+#include<stdio.h>
+struct Node {
+	int data;
+	struct Node* next;
+};
+void ReversePrint(Node* head){
+	if(head == NULL){
+		printf("\n");
+		return;
+	}
+	ReversePrint(head->next);
+	printf("%d ", head->data);
+}
+Node* Insert(Node* head,int data){
+	Node *temp = new Node();
+	temp->data = data;
+	temp->next = NULL;
+	if(head == NULL) head = temp;
+	else{
+		Node* temp1 = head;
+		while(temp1->next != NULL){
+			temp1 = temp1->next;
+			temp1->next = temp;
+		}
+	}
+	return head;
+}
+int main()
+{
+	sturct Node* head = NULL;
+	head = Insert(head,2);
+	head = Insert(head,4);
+	head = Insert(head,6);
+	head = Insert(head,8);
+	ReversePrint(head);
+}
