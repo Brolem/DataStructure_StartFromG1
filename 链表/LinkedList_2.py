@@ -1,4 +1,4 @@
-#链表：头部插入节点
+'''链表：头部插入节点'''
 class Node:
     def __init__(self, data=None):
         self.data = data
