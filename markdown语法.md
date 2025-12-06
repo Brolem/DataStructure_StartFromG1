@@ -30,11 +30,18 @@
 ```python
 print("Hello, world!")
 ```
+- {.line-numbers}添加代码行数
+```python{.line-numbers}
+print("Hello, world!")
+```
 
 ---
-**链接和图片**：用[]和()组合
-- [链接文字](https://www.baidu.com)
+**导入文件**：用[]和()组合或顶格@import
+- [百度](https://www.baidu.com)
 - ![图片alt文本](https://ts3.tc.mm.bing.net/th/id/OIP-C.LiXZw0doNJZ7Gvlqf6xZcwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3)
+
+@import "README.md"
+![](README.md)
 
 
 ---
@@ -46,3 +53,43 @@ print("Hello, world!")
 **分割线**：用三个或以上的-、*或_
 - ***
 - ___
+
+
+---
+**任务列表**
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
+
+
+---
+**表格**
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
+
+
+---
+**上标**：30^th^
+**下标**：H~2~O
+
+**高亮**：==highlight==
+
+**缩写**
+*[HTML]: Hyper Text Markup Language
+*[W3C]: World Wide Web Consortium
+The HTML specification is maintained by the W3C.
+
+
+---
+**数学**
+- $f(x) = sin(x) + 12$ 或者 \(f(x) = sin(x) + 12\) 中的数学表达式将会在行内显示
+- $$\sum_{n=1}^{100} x_n$$ 或者 \[\sum_{n=1}^{100} x_n\] 或者 ```math 中的数学表达式将会在块内显示
+
+
+---
+**脚注**：Content [^1][^2]
+[^1]: Hi! This is a footnote.
+[^2]: Hi! This also is a footnote.
